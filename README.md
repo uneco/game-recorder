@@ -28,6 +28,14 @@ game-recorder.exe --hwnd <decimal> --pid <process-id> --output <absolute.mp4> --
 - Output is written to `<stem>.partial.mp4` and atomically renamed to `--output` only after successful MP4 finalization.
 - Window resize, window close, or target process exit automatically triggers clean finalization.
 
+## Godot 4 Example & Agent Skill
+
+Ready-to-use Godot 4 GDScript files and an AI agent skill (`SKILL.md`) are included in [`example/`](example/):
+
+- [`example/game_recorder.gd`](example/game_recorder.gd) — Process lifecycle, PCK extraction, MAX_PATH guard, and status polling controller
+- [`example/recording_overlay.gd`](example/recording_overlay.gd) / [`example/recording_icon.gd`](example/recording_icon.gd) — Standalone recording button & toast overlay
+- [`example/SKILL.md`](example/SKILL.md) — Drop-in skill guide for adding local MP4 recording to any Godot 4 project without Rust
+
 ## Building from Source
 
 Requires Rust >= 1.87 on Windows:
